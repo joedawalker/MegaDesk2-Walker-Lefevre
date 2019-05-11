@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_Walker
+﻿namespace MegaDesk_Walker.Forms
 {
 	partial class ViewAllQuotes
 	{
@@ -32,11 +32,12 @@
 			// 
 			// ViewAllQuotes
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Name = "ViewAllQuotes";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "View All Quotes";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewAllQuotes_FormClosed);
 			this.ResumeLayout(false);
 
 		}

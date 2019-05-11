@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_Walker
+﻿namespace MegaDesk_Walker.Forms
 {
 	partial class SearchQuotes
 	{
@@ -32,11 +32,12 @@
 			// 
 			// SearchQuotes
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Name = "SearchQuotes";
-			this.Text = "S";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Search Quotes";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SearchQuotes_FormClosed);
 			this.ResumeLayout(false);
 
 		}
