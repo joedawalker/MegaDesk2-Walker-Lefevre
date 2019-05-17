@@ -2,7 +2,7 @@
 
 namespace MegaDesk_Walker.Classes
 {
-	public enum ProductionType
+	public enum RushOrderType
 	{
 		[Description( "14-Day (Normal)" )]
 		FourteenDay = 0,

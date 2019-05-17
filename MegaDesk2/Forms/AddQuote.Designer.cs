@@ -41,7 +41,7 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.rushOrderSelect = new System.Windows.Forms.ComboBox();
 			this.dateLabel = new System.Windows.Forms.Label();
-			this.getQuoteButton = new System.Windows.Forms.Button();
+			this.saveQuoteButton = new System.Windows.Forms.Button();
 			this.nameRequiredErrorMessage = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.widthUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.depthUpDown)).BeginInit();
@@ -206,17 +206,17 @@
 			this.dateLabel.TabIndex = 12;
 			this.dateLabel.Text = "Date";
 			// 
-			// getQuoteButton
+			// saveQuoteButton
 			// 
-			this.getQuoteButton.AutoSize = true;
-			this.getQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.getQuoteButton.Location = new System.Drawing.Point(238, 370);
-			this.getQuoteButton.Name = "getQuoteButton";
-			this.getQuoteButton.Size = new System.Drawing.Size(264, 47);
-			this.getQuoteButton.TabIndex = 6;
-			this.getQuoteButton.Text = "Get Quote";
-			this.getQuoteButton.UseVisualStyleBackColor = true;
-			this.getQuoteButton.Click += new System.EventHandler(this.GetQuoteButton_Click);
+			this.saveQuoteButton.AutoSize = true;
+			this.saveQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.saveQuoteButton.Location = new System.Drawing.Point(238, 370);
+			this.saveQuoteButton.Name = "saveQuoteButton";
+			this.saveQuoteButton.Size = new System.Drawing.Size(264, 47);
+			this.saveQuoteButton.TabIndex = 6;
+			this.saveQuoteButton.Text = "Save Quote";
+			this.saveQuoteButton.UseVisualStyleBackColor = true;
+			this.saveQuoteButton.Click += new System.EventHandler(this.SaveQuoteButton_Click);
 			// 
 			// nameRequiredErrorMessage
 			// 
@@ -233,7 +233,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.ClientSize = new System.Drawing.Size(718, 450);
 			this.Controls.Add(this.nameRequiredErrorMessage);
-			this.Controls.Add(this.getQuoteButton);
+			this.Controls.Add(this.saveQuoteButton);
 			this.Controls.Add(this.dateLabel);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.rushOrderSelect);
@@ -274,7 +274,7 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.ComboBox rushOrderSelect;
 		private System.Windows.Forms.Label dateLabel;
-		private System.Windows.Forms.Button getQuoteButton;
+		private System.Windows.Forms.Button saveQuoteButton;
 		private System.Windows.Forms.Label nameRequiredErrorMessage;
 	}
 }

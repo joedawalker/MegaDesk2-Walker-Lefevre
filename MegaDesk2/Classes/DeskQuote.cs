@@ -11,7 +11,7 @@ namespace MegaDesk_Walker.Classes
 	public class DeskQuote
 	{
 		public string CustomerName { get; set; }
-		public ProductionType ProductionType { get; set; }
+		public RushOrderType RushOrderType { get; set; }
 		public Desk Desk { get; set; }
 		public DateTime Date { get; set; }
 		public decimal QuotePrice { get; set; }
@@ -24,7 +24,7 @@ namespace MegaDesk_Walker.Classes
 		{
 			decimal surfaceArea = Desk.Depth * Desk.Width;
 
-			return GetDeskPrice( surfaceArea ) + GetRushCost( surfaceArea );
+			return GetDeskPrice( surfaceArea ) + GetRushOrderCost( surfaceArea );
 		}
 
 		private decimal GetDeskPrice( decimal surfaceArea )
@@ -63,17 +63,18 @@ namespace MegaDesk_Walker.Classes
 			}
 		}
 
-		private decimal GetRushCost( decimal surfaceArea )
+		private decimal GetRushOrderCost( decimal surfaceArea )
 		{
+			decimal[,] rushOrderPricing = new decimal[3,3];
 			if ( surfaceArea < 1000 )
 			{
-				switch ( ProductionType )
+				switch ( RushOrderType )
 				{
-					case ProductionType.ThreeDay:
+					case RushOrderType.ThreeDay:
 						return 60.00M;
-					case ProductionType.FiveDay:
+					case RushOrderType.FiveDay:
 						return 40.00M;
-					case ProductionType.SevenDay:
+					case RushOrderType.SevenDay:
 						return 30.00M;
 					default:
 						return 0;
@@ -81,13 +82,13 @@ namespace MegaDesk_Walker.Classes
 			}
 			else if ( surfaceArea >= 1000 && surfaceArea <= 2000 )
 			{
-				switch ( ProductionType )
+				switch ( RushOrderType )
 				{
-					case ProductionType.ThreeDay:
+					case RushOrderType.ThreeDay:
 						return 70.00M;
-					case ProductionType.FiveDay:
+					case RushOrderType.FiveDay:
 						return 50.00M;
-					case ProductionType.SevenDay:
+					case RushOrderType.SevenDay:
 						return 35.00M;
 					default:
 						return 0;
@@ -95,13 +96,13 @@ namespace MegaDesk_Walker.Classes
 			}
 			else
 			{
-				switch ( ProductionType )
+				switch ( RushOrderType )
 				{
-					case ProductionType.ThreeDay:
+					case RushOrderType.ThreeDay:
 						return 80.00M;
-					case ProductionType.FiveDay:
+					case RushOrderType.FiveDay:
 						return 60.00M;
-					case ProductionType.SevenDay:
+					case RushOrderType.SevenDay:
 						return 40.00M;
 					default:
 						return 0;

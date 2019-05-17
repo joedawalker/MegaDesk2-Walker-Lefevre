@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Classes\Desk.cs" />
     <Compile Include="Classes\DeskQuote.cs" />
-    <Compile Include="Classes\ProductionType.cs" />
+    <Compile Include="Classes\RushOrderType.cs" />
     <Compile Include="Forms\AddQuote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +109,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Data\quotes.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
