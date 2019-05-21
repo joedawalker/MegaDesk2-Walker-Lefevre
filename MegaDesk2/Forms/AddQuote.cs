@@ -66,7 +66,12 @@ namespace MegaDesk_Walker.Forms
 
 			quote.QuotePrice = quote.GetQuote();
 
-			quotes.Add(quote);
+			using ( StreamReader quoteReader = new StreamReader( QUOTE_PATH ) )
+			{
+				quotes.AddRange( JsonConvert.DeserializeObject<List<DeskQuote>>( quoteReader.ReadToEnd() ) );
+			}
+
+			quotes.Add( quote );
 
 			using ( StreamWriter file = File.CreateText( QUOTE_PATH ) )
 			{
