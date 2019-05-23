@@ -1,1 +1,9 @@
-This will hold rush order data
+60
+40
+30
+70
+50
+35
+80
+60
+40

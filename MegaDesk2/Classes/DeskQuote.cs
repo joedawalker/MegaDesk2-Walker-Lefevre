@@ -16,6 +16,7 @@ namespace MegaDesk_Walker.Classes
 		public DateTime Date { get; set; }
 		public decimal QuotePrice { get; set; }
 
+		private QuoteFileManager _quoteFileManager = new QuoteFileManager();
 		private const decimal BASE_DESK_PRICE = 200.00M;
 		private const decimal SURFACE_AREA_RATE = 1;
 		private const decimal DRAWER_RATE = 50.00M;
@@ -23,7 +24,7 @@ namespace MegaDesk_Walker.Classes
 		public decimal GetQuote()
 		{
 			decimal surfaceArea = Desk.Depth * Desk.Width;
-
+			var test = GetRushOrderCost( surfaceArea );
 			return GetDeskPrice( surfaceArea ) + GetRushOrderCost( surfaceArea );
 		}
 
@@ -65,17 +66,18 @@ namespace MegaDesk_Walker.Classes
 
 		private decimal GetRushOrderCost( decimal surfaceArea )
 		{
-			decimal[,] rushOrderPricing = new decimal[3,3];
+			decimal[,] rushOrderPrices = _quoteFileManager.GetRushOrderPrices();
+
 			if ( surfaceArea < 1000 )
 			{
 				switch ( RushOrderType )
 				{
 					case RushOrderType.ThreeDay:
-						return 60.00M;
+						return rushOrderPrices[0, 0];
 					case RushOrderType.FiveDay:
-						return 40.00M;
+						return rushOrderPrices[0, 1];
 					case RushOrderType.SevenDay:
-						return 30.00M;
+						return rushOrderPrices[0, 2];
 					default:
 						return 0;
 				}
@@ -85,11 +87,11 @@ namespace MegaDesk_Walker.Classes
 				switch ( RushOrderType )
 				{
 					case RushOrderType.ThreeDay:
-						return 70.00M;
+						return rushOrderPrices[1, 0];
 					case RushOrderType.FiveDay:
-						return 50.00M;
+						return rushOrderPrices[1, 1];
 					case RushOrderType.SevenDay:
-						return 35.00M;
+						return rushOrderPrices[1, 2];
 					default:
 						return 0;
 				}
@@ -99,11 +101,11 @@ namespace MegaDesk_Walker.Classes
 				switch ( RushOrderType )
 				{
 					case RushOrderType.ThreeDay:
-						return 80.00M;
+						return rushOrderPrices[2, 0];
 					case RushOrderType.FiveDay:
-						return 60.00M;
+						return rushOrderPrices[2, 1];
 					case RushOrderType.SevenDay:
-						return 40.00M;
+						return rushOrderPrices[2, 2];
 					default:
 						return 0;
 				}

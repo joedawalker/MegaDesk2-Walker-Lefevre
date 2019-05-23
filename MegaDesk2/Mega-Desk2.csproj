@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Classes\Desk.cs" />
     <Compile Include="Classes\DeskQuote.cs" />
+    <Compile Include="Classes\QuoteFileManager.cs" />
     <Compile Include="Classes\RushOrderType.cs" />
     <Compile Include="Forms\AddQuote.cs">
       <SubType>Form</SubType>
@@ -126,6 +127,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Data\ExceptionLog.txt" />
     <Content Include="Data\rushOrderPrices.txt" />
     <Content Include="Images\mega-desk.png" />
   </ItemGroup>

@@ -12,6 +12,7 @@ namespace MegaDesk_Walker.Forms
 {
 	public partial class AddQuote : Form
 	{
+		private readonly QuoteFileManager _quoteFileManager = new QuoteFileManager();
 		private const string QUOTE_PATH =
 			@"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\quotes.json";
 
@@ -40,7 +41,7 @@ namespace MegaDesk_Walker.Forms
 
 		private void SaveQuoteButton_Click( object sender, EventArgs e )
 		{
-			List<DeskQuote> quotes = new List<DeskQuote>();
+			List<DeskQuote> quotes = _quoteFileManager.GetSavedQuotes();
 
 			if ( string.IsNullOrWhiteSpace( fullNameInput.Text ) )
 			{
@@ -66,19 +67,9 @@ namespace MegaDesk_Walker.Forms
 
 			quote.QuotePrice = quote.GetQuote();
 
-			using ( StreamReader quoteReader = new StreamReader( QUOTE_PATH ) )
-			{
-				quotes.AddRange( JsonConvert.DeserializeObject<List<DeskQuote>>( quoteReader.ReadToEnd() ) );
-			}
-
 			quotes.Add( quote );
 
-			using ( StreamWriter file = File.CreateText( QUOTE_PATH ) )
-			{
-				JsonSerializer serializer = new JsonSerializer();
-
-				serializer.Serialize( file, quotes );
-			}
+			_quoteFileManager.SaveQuotes( quotes );
 
 			DisplayQuote displayQuote = new DisplayQuote( quote );
 			displayQuote.ShowDialog();
