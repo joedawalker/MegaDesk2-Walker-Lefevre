@@ -12,11 +12,15 @@ namespace MegaDesk_Walker.Classes
 	public class QuoteFileManager
 	{
 		private const string QUOTE_PATH =
-			@"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\quotes.json";
+            @"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\quotes.json";
+            //@"C:\Users\Matthew\learning\dotNET-class\MegaDesk2.0\MegaDesk2\Data\quotes.json";
 		private const string RUSH_ORDER_PATH =
-			@"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\rushOrderPrices.txt";
+            @"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\rushOrderPrices.txt";
+            //@"C:\Users\Matthew\learning\dotNET-class\MegaDesk2.0\MegaDesk2\Data\rushOrderPrices.txt";
 
-		private const string EXCEPTION_LOG_PATH = @"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\ExceptionLog.txt";
+		private const string EXCEPTION_LOG_PATH =
+            @"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\ExceptionLog.txt";
+            //@"C:\Users\Matthew\learning\dotNET-class\MegaDesk2.0\MegaDesk2\Data\ExceptionLog.txt";
 
 		private const int NUMBER_OF_SIZE_TIERS = 3;
 		private const int NUMBER_OF_RUSH_TIERS = 3;
