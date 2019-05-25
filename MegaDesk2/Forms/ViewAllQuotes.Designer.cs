@@ -28,29 +28,29 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.allQuotesGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.allQuotesGridView)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // allQuotesGridView
-            // 
-            this.allQuotesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.allQuotesGridView.Location = new System.Drawing.Point(0, -1);
-            this.allQuotesGridView.Name = "allQuotesGridView";
-            this.allQuotesGridView.Size = new System.Drawing.Size(801, 439);
-            this.allQuotesGridView.TabIndex = 0;
-            // 
-            // ViewAllQuotes
-            // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.allQuotesGridView);
-            this.Name = "ViewAllQuotes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "View All Quotes";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewAllQuotes_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.allQuotesGridView)).EndInit();
-            this.ResumeLayout(false);
+			this.allQuotesGridView = new System.Windows.Forms.DataGridView();
+			((System.ComponentModel.ISupportInitialize)(this.allQuotesGridView)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// allQuotesGridView
+			// 
+			this.allQuotesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.allQuotesGridView.Location = new System.Drawing.Point(0, -1);
+			this.allQuotesGridView.Name = "allQuotesGridView";
+			this.allQuotesGridView.Size = new System.Drawing.Size(845, 439);
+			this.allQuotesGridView.TabIndex = 0;
+			// 
+			// ViewAllQuotes
+			// 
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.ClientSize = new System.Drawing.Size(844, 450);
+			this.Controls.Add(this.allQuotesGridView);
+			this.Name = "ViewAllQuotes";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "View All Quotes";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewAllQuotes_FormClosed);
+			((System.ComponentModel.ISupportInitialize)(this.allQuotesGridView)).EndInit();
+			this.ResumeLayout(false);
 
 		}
 
