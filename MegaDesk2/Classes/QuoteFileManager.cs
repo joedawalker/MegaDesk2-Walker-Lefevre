@@ -16,7 +16,8 @@ namespace MegaDesk_Walker.Classes
 		private const string RUSH_ORDER_PATH =
 			@"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\rushOrderPrices.txt";
 
-		private const string EXCEPTION_LOG_PATH = @"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\ExceptionLog.txt";
+		private const string EXCEPTION_LOG_PATH = 
+			@"C:\Users\Joseph Walker\source\repos\MegaDesk2-Walker-Lefevre\MegaDesk2\Data\ExceptionLog.txt";
 
 		private const int NUMBER_OF_SIZE_TIERS = 3;
 		private const int NUMBER_OF_RUSH_TIERS = 3;

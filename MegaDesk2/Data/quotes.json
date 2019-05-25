@@ -1,1 +1,1 @@
-[]
+[{"CustomerName":"test_351","RushOrderType":2,"Desk":{"Depth":12,"Width":24,"NumberOfDrawers":0,"SurfaceMaterial":3},"Date":"2019-05-23T15:51:14.2165034-06:00","QuotePrice":828.00},{"CustomerName":"test_351","RushOrderType":2,"Desk":{"Depth":12,"Width":24,"NumberOfDrawers":0,"SurfaceMaterial":2},"Date":"2019-05-23T15:51:22.2749315-06:00","QuotePrice":578.00},{"CustomerName":"test_351","RushOrderType":2,"Desk":{"Depth":12,"Width":24,"NumberOfDrawers":0,"SurfaceMaterial":0},"Date":"2019-05-23T15:51:27.7308568-06:00","QuotePrice":728.00}]

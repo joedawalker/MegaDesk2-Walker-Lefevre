@@ -1,12 +1,10 @@
-﻿using System;
+﻿using MegaDesk_Walker.Classes;
+using MegaDesk_Walker.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using MegaDesk_Walker.Classes;
-using MegaDesk_Walker.Properties;
-using Newtonsoft.Json;
 
 namespace MegaDesk_Walker.Forms
 {
